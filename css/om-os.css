@@ -1,0 +1,169 @@
+/************Reset**************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/***********images**********/
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.parkbio {
+  padding: 40px; /* spacing around the image */
+  width: fit-content; /* so the box wraps neatly */
+}
+
+.parkbio img {
+  border: 2px solid #fcbc32;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.biosal {
+  padding: 40px; /* spacing around the image */
+  width: fit-content; /* so the box wraps neatly */
+}
+
+.biosal img {
+  border: 2px solid #fcbc32;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*********fonte********/
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/************overskrifter*********/
+h1 {
+  color: white;
+  font-family: "Limelight", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+p {
+  margin-top: 1rem;
+  color: white;
+}
+
+.om-os2 {
+  background-color: #610f13; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 20px; /* space inside the box */
+  max-width: 400px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.om-os2 h2 {
+  background-color: #8e0000; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 10px; /* space inside the box */
+  max-width: 400px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  margin-top: 5px;
+}
+/***********burger menu**************/
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .menu a:hover {
+    background-color: #8e0000;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #610f13;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+}
+.overskrift {
+  margin-block: 0.8rem;
+  font-size: 0.6rem;
+}
+
+@media screen and (max-width: 800px) {
+  .burger {
+    position: absolute;
+    right: 20px; /* 👈 distance from right side */
+    top: 20px; /* 👈 adjust as needed */
+  }
+}
