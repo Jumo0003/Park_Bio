@@ -16,6 +16,7 @@ img {
 .parkbio {
   padding: 40px; /* spacing around the image */
   width: fit-content; /* so the box wraps neatly */
+  margin-top: 1rem;
 }
 
 .parkbio img {
@@ -47,8 +48,15 @@ img {
 /************overskrifter*********/
 h1 {
   color: white;
+  margin-top: 5rem;
   font-family: "Limelight", sans-serif;
   text-align: center;
+  background-color: #b70100; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 10px; /* space inside the box */
+  max-width: 400px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  margin-top: 15px;
 }
 
 h2 {
@@ -165,5 +173,25 @@ p {
     position: absolute;
     right: 20px; /* 👈 distance from right side */
     top: 20px; /* 👈 adjust as needed */
+  }
+}
+
+/**************** Desktop ********************/
+
+@media (min-width: 840px) {
+  .om-os1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: left;
+    align-items: center;
+  }
+
+  .om-os1 img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: left;
+    align-items: center;
   }
 }
