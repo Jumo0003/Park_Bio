@@ -1,62 +1,124 @@
+/************Reset**************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*****Farver***/
 body {
   background-color: #8e0000;
 }
 
-/********menu***********/
-
-header {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #8e0000;
-  border-bottom: #fcbc32 solid 2px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo img {
-  width: 70px;
-  height: 70px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  margin-right: 20px;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a {
-  display: block;
-  padding: 20px;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-  text-align: end;
-  font-family: "Bangers", system-ui;
+/*********fonte********/
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  -webkit-text-stroke: 0.5px black;
+  font-style: normal;
 }
 
-.menu a:hover {
-  color: #fcbc32;
+.logo {
+  color: white;
+  margin-top: 5rem;
+  font-family: "Limelight", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #b70100; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 10px; /* space inside the box */
+  max-width: 400px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  margin-top: 15px;
+}
+
+/***********burger menu**************/
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .menu a:hover {
+    background-color: #8e0000;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #610f13;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+}
+.overskrift {
+  margin-block: 0.8rem;
+  font-size: 0.6rem;
+}
+
+@media screen and (max-width: 800px) {
+  .burger {
+    position: absolute;
+    right: 20px; /* 👈 distance from right side */
+    top: 20px; /* 👈 adjust as needed */
+  }
 }
 
 /*********** footer ***********/
@@ -76,6 +138,7 @@ nav {
 
 .footer p {
   margin: 0;
+  color: white;
 }
 
 .social-links {
@@ -93,4 +156,63 @@ nav {
 .social-links a:hover img {
   transform: scale(1.2);
   filter: invert(67%) sepia(75%) saturate(500%) hue-rotate(200deg);
+}
+
+/********menu***********/
+
+@media (min-width: 840px) {
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #8e0000;
+    border-bottom: #fcbc32 solid 2px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0.5px black;
+  }
+
+  .menu a:hover {
+    color: #fcbc32;
+  }
 }
