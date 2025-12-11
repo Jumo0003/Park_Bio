@@ -137,3 +137,21 @@
   position: relative;
   left: 450px;
 }
+
+#knap1 {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 15px 25px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+#knap2 {
+  padding: 15px 25px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+h2 {
+  color: #f2f2f2;
+}
