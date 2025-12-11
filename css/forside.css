@@ -122,11 +122,18 @@
   left: 25px;
 }
 
-button {
+.slideshow-container button {
   position: relative;
   left: 450px;
 }
-h2 {
+.filmoverskrift {
   color: #f2f2f2;
   text-decoration: underline;
+}
+
+/**********Grid for Redbox Container***********/
+#knap1,
+#knap2 {
+  position: relative;
+  left: 450px;
 }
