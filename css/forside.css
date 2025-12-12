@@ -84,7 +84,8 @@
 
 /*******menu2**************/
 
-#menu2 {
+#menu2,
+#menu3 {
   list-style: none;
   text-align: center;
   padding: 0;
@@ -94,12 +95,14 @@
   padding-bottom: 5px;
 }
 
-#menu2 li {
+#menu2 li,
+#menu3 li {
   margin: 0 15px;
   display: inline-block;
 }
 
-#menu2 a {
+#menu2 a,
+#menu3 a {
   color: white;
   text-decoration: none;
 }
@@ -155,3 +158,126 @@
 h2 {
   color: #f2f2f2;
 }
+
+/*********Accordions*****/
+
+.accordion {
+  background-color: #4a0000;
+  color: #fbfbfb;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+button p {
+  color: white;
+}
+
+.active,
+.accordion:hover {
+  background-color: #d56868;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #8a0000;
+  overflow: hidden;
+}
+
+/***********slideshow i akkordion************/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.carousel img {
+  height: 180px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Skjul scrollbars */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel-btn.left {
+  left: 5px;
+}
+
+.carousel-btn.right {
+  right: 5px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.poster {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.poster img {
+  height: 180px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+/* Play knap */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* så knappen ikke blokerer klik */
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+/* Hover effekten */
+.poster:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 220, 160, 0.7);
+}
+
+.poster:hover .play-btn {
+  opacity: 1;
+}
+
+/***********
