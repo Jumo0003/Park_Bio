@@ -280,4 +280,133 @@ button p {
   opacity: 1;
 }
 
-/***********
+/***********dato karusel*******/
+
+:root {
+  --bg: #6b0f14; /* deep bordeaux */
+  --panel: #7a1418;
+  --fg: #f5f1eb; /* warm white */
+  --muted: #d6cfc6;
+  --accent: #e3b873; /* gold accent */
+  --active: #cfc6b8;
+}
+
+.date-carousel {
+  max-width: 1000px;
+  margin: 40px auto;
+  color: var(--fg);
+}
+
+.date-carousel.parkbio {
+  background: var(--bg);
+  padding: 25px 30px;
+  border-radius: 14px;
+}
+
+/* HEADER */
+.date-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-header h2 {
+  flex-grow: 1;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ARROWS */
+.arrow {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: var(--fg);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.arrow:hover {
+  color: var(--accent);
+}
+
+/* TODAY BUTTON */
+.today-btn {
+  padding: 6px 14px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.today-btn:hover {
+  background: var(--accent);
+  color: #4a0d10;
+}
+
+/* DATES */
+.dates-wrapper {
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.4s ease;
+}
+
+/* DATE ITEM */
+.date-item {
+  text-align: center;
+  padding: 10px 18px;
+  border-radius: 22px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.date-item .day {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+
+.date-item .number {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ACTIVE DAY */
+.date-item.active {
+  background: var(--active);
+  color: #4a0d10;
+}
+
+/* HOVER */
+.date-item:hover:not(.active):not(.disabled) {
+  background: var(--panel);
+  transform: translateY(-2px);
+}
+
+/* DISABLED (PAST DATES) */
+.date-item.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* EVENT DOT */
+.date-item.event::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
