@@ -106,6 +106,9 @@
   color: white;
   text-decoration: none;
 }
+#menu3 {
+  display: contents;
+}
 
 /*************movie poster css*****/
 
@@ -160,6 +163,16 @@ h2 {
 }
 
 /*********Accordions*****/
+
+.filters {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+}
 
 .accordion {
   background-color: #4a0000;
@@ -292,7 +305,8 @@ button p {
 }
 
 .date-carousel {
-  max-width: 1000px;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 40px auto;
   color: var(--fg);
 }
@@ -409,4 +423,108 @@ button p {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/***********new css for dato karusel**********/
+/* container stays the same */
+.date-carousel.parkbio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #6b0f14;
+  padding: 14px 18px;
+  border-radius: 10px;
+}
+
+/* arrows */
+.date-carousel .arrow {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* dates row */
+.dates {
+  display: flex;
+  gap: 8px;
+}
+
+/* date item becomes a box */
+.date-item {
+  width: 80px;
+  padding: 6px 0 8px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+  width: 64px;
+
+  /* animation */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover */
+.date-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* day text */
+.date-item .day {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* date number */
+.date-item .number {
+  font-size: 14px;
+}
+
+/* fake time line (same for all) */
+.date-item::after {
+  content: "12:00";
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* active (today / selected) */
+.date-item.active {
+  outline: 3px solid #fff;
+}
+
+/* COLOR LOGIC (pure CSS, no HTML changes) */
+
+/* Monday */
+.date-item:nth-child(1) {
+  background: #f2b705;
+}
+
+/* Tue–Fri */
+.date-item:nth-child(2),
+.date-item:nth-child(3),
+.date-item:nth-child(4),
+.date-item:nth-child(5) {
+  background: #2fa84f;
+}
+
+/* Saturday */
+.date-item:nth-child(6) {
+  background: #2fa84f;
+}
+
+/* Sunday */
+.date-item:nth-child(7) {
+  background: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .dates {
+    overflow-x: auto;
+    display: flex;
+  }
 }
