@@ -164,13 +164,15 @@ h2 {
 
 /*********Accordions*****/
 
-.filters {
-  display: flex;
+.accordion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 @media (max-width: 768px) {
-  .filters {
-    flex-direction: column;
+  .accordion-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -185,6 +187,44 @@ h2 {
   outline: none;
   font-size: 15px;
   transition: 0.4s;
+  background: #6b0f14; /* Park Bio vibe */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* content hidden by default */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 16px;
+}
+/* open state */
+.accordion.open .accordion-content {
+  max-height: 500px; /* stor nok */
+  padding-bottom: 16px;
+}
+
+/* hide the closed accordion when one is open */
+.accordion-grid.single-open .accordion:not(.open) {
+  display: none;
+}
+
+/* when one accordion is open */
+.accordion-grid.single-open {
+  grid-template-columns: 1fr;
+}
+
+/* header */
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
 }
 
 button p {

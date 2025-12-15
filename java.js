@@ -151,3 +151,24 @@ document.addEventListener("keydown", (e) => {
 });
 
 renderDates();
+
+/*************akkordion stuff********/
+
+const accordions = document.querySelectorAll(".accordion");
+const grid = document.querySelector(".accordion-grid");
+
+accordions.forEach((acc) => {
+  acc.querySelector(".accordion-header").addEventListener("click", () => {
+    const isOpen = acc.classList.contains("open");
+
+    // luk alle
+    accordions.forEach((a) => a.classList.remove("open"));
+
+    if (isOpen) {
+      grid.classList.remove("single-open");
+    } else {
+      acc.classList.add("open");
+      grid.classList.add("single-open");
+    }
+  });
+});
