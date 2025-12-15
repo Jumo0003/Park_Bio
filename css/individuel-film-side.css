@@ -197,10 +197,9 @@
   main {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 kolonner: 50/50 */
-    gap: 2rem; /* afstand mellem billede og boks */
-    align-items: start; /* så de starter i toppen */
+    gap: 15rem; /* afstand mellem billede og boks */
     max-width: 1000px;
-    margin: 0 auto; /* centrer hele content */
+    margin: auto;
   }
 
   .film1 img {
@@ -208,12 +207,15 @@
     height: auto;
     display: block;
     margin-top: 2rem;
+    margin-left: 2rem;
     grid-template-rows: 2fr;
   }
 
   .boks1 {
-    width: 100%;
+    width: 120%;
     grid-template-rows: 1fr;
+    align-items: center;
+    justify-self: center;
   }
 
   .star-rating {

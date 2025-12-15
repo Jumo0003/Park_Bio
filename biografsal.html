@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>om os</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/om-os.css">
+    <link rel="stylesheet" href="css/biografsal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <p class="logo">Park Bio</p>
+
+
+    <main>
+        <div class="move-container">
+            <label>Vælg en film:</label>
+            <select id="movie">
+                <option value="110">Avengers: End Game (110 DKK)</option>
+                <option value="110">Dark Knight (110 DKK)</option>
+                <option value="110">Harry Potter and the Goblet of Fire (110 DKK)</option>
+                <option value="110">Transformers (110 DKK)</option>
+            </select>
+        </div>
+
+        <ul class="showcase">
+            <li>
+                <div class="seat"></div>
+                <small>Ledig</small>
+            </li>
+            <li>
+                <div class="seat selected"></div>
+                <small>Sæde valgt</small>
+            </li>
+            <li>
+                <div class="seat occupied"></div>
+                <small>Optaget</small>
+            </li>
+        </ul>
+
+        <div class="container">
+            <div class="screen"></div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+            </div>
+        </div>
+
+        <p class="text">
+            Du har valgt <span id="count">0</span> sæder til prisen DKK<span id="total">0</span>!
+        </p>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="menu.js"></script>
+    <script src="biografsal.js"></script>
+</body>
+
+</html>
