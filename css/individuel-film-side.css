@@ -1,6 +1,229 @@
 .karousel {
   display: grid;
 }
-img {
-  border: solid gold;
+.film1 img {
+  border: 5px double #fcbc32;
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.titel {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 2%;
+}
+
+.boks1 {
+  background-color: #610f13; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 20px; /* space inside the box */
+  max-width: 500px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.boks2 {
+  margin-top: 10rem;
+  display: grid;
+  width: 80%;
+  margin: auto;
+  color: white;
+}
+
+.boks2 p {
+  margin-top: 1rem;
+}
+
+.info2 {
+  background-color: black; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 20px; /* space inside the box */
+  max-width: 400px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.info2 h3 {
+  color: #c00a08;
+  font-size: smaller;
+  font-weight: 100;
+}
+
+.info2 p {
+  color: white;
+  font-weight: 100;
+  font-size: 12px;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/******karousel*******/
+
+.karousel {
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.karousel-track {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #1a1a1a; /* mørk biograf-baggrund */
+  border-radius: 999px;
+  overflow-x: auto; /* kan scrolle vandret hvis der er for mange dage */
+  scrollbar-width: none; /* Firefox: skjul scrollbar */
+}
+
+.karousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari: skjul scrollbar */
+}
+
+/* Dagskortene (billetter) */
+.day {
+  min-width: 90px;
+  background-color: #b70100; /* samme røde som din ticket */
+  border: 2px solid #fcbc32; /* gul kant */
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  color: white;
+  font-family: "Limelight", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.day:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #d30202;
+}
+
+/* Typografi inde i dagen */
+.day-name {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.day-date {
+  font-size: 0.85rem;
+}
+
+.day-time {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* "Pile" – rent visuelt (du kan senere koble JS på hvis du vil) */
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fcbc32;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow-left {
+  margin-right: 0.25rem;
+}
+
+.arrow-right {
+  margin-left: 0.25rem;
+}
+
+/* Mobil: fyld hele bredden og lidt større kort */
+@media (max-width: 600px) {
+  .karousel-track {
+    border-radius: 0;
+  }
+
+  .day {
+    min-width: 110px;
+  }
+}
+
+/*******stjerner********/
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse; /* gør det nemt at fylde fra venstre */
+  justify-content: center;
+  gap: 4px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* skjul radio-knapper */
+.star-rating input {
+  display: none;
+}
+
+/* stjernerne */
+.star-rating label {
+  font-size: 3rem;
+  color: #555; /* grå når inaktiv */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* når man har valgt en stjerne: farv den + alle "til venstre" */
+.star-rating input:checked ~ label {
+  color: #fcbc32; /* gul som din biograf-farve */
+}
+
+/* hover-effekt: vis hvad man er ved at vælge */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffd766;
+}
+
+/**************** Desktop ********************/
+
+@media (min-width: 840px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolonner: 50/50 */
+    gap: 2rem; /* afstand mellem billede og boks */
+    align-items: start; /* så de starter i toppen */
+    max-width: 1000px;
+    margin: 0 auto; /* centrer hele content */
+  }
+
+  .film1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 2rem;
+    grid-template-rows: 2fr;
+  }
+
+  .boks1 {
+    width: 100%;
+    grid-template-rows: 1fr;
+  }
+
+  .star-rating {
+    grid-column: 2;
+    margin-top: 1rem;
+    justify-self: center; /* eller center, hvis du vil have dem centreret */
+    grid-template-rows: 1fr;
+  }
+
+  .boks2 {
+    width: 100%;
+  }
 }
