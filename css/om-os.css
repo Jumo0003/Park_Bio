@@ -73,6 +73,7 @@ p {
     grid-template-rows: 1fr;
     text-align: left;
     align-items: center;
+    margin-top: 1rem;
   }
 
   .om-os1 img {
@@ -81,5 +82,17 @@ p {
     grid-template-rows: 1fr 1fr;
     text-align: left;
     align-items: center;
+  }
+
+  .billeder {
+    gap: 1rem;
+  }
+
+  .parkbio {
+    margin-top: 1rem;
+  }
+
+  .om-os2 {
+    padding: 5%;
   }
 }
