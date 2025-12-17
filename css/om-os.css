@@ -6,10 +6,16 @@ img {
   display: block;
 }
 
+video {
+  align-items: center;
+  width: 600px;
+  border: 2px solid #fcbc32;
+}
+
 .parkbio {
   padding: 40px; /* spacing around the image */
   width: fit-content; /* so the box wraps neatly */
-  margin-top: 1rem;
+  margin-bottom: 5px;
 }
 
 .parkbio img {
@@ -21,6 +27,7 @@ img {
 
 .biosal {
   padding: 40px; /* spacing around the image */
+  padding-top: 2px;
   width: fit-content; /* so the box wraps neatly */
 }
 
@@ -42,20 +49,32 @@ h1 {
 p {
   margin-top: 1rem;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .om-os2 {
   background-color: #610f13; /* light background */
   border: 2px solid #fcbc32;
   padding: 20px; /* space inside the box */
-  max-width: 400px; /* optional: keeps it from getting too wide */
+  width: 500px; /* optional: keeps it from getting too wide */
   margin: 40px auto; /* centers the box on the page */
   margin-top: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
 
 .om-os2 h2 {
+  background-color: #8e0000; /* light background */
+  border: 2px solid #fcbc32;
+  padding: 10px; /* space inside the box */
+  max-width: 400px; /* optional: keeps it from getting too wide */
+  margin: 40px auto; /* centers the box on the page */
+  margin-top: 5px;
+}
+
+.om-os2 h1 {
   background-color: #8e0000; /* light background */
   border: 2px solid #fcbc32;
   padding: 10px; /* space inside the box */
@@ -74,18 +93,16 @@ p {
     text-align: left;
     align-items: center;
     margin-top: 1rem;
+    justify-content: center;
   }
 
-  .om-os1 img {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    text-align: left;
-    align-items: center;
+  .om-os2 {
+    margin-left: 20%;
+    width: 550px;
+    height: 1015px;
   }
-
-  .billeder {
-    gap: 1rem;
+  .om-os2 p {
+    font-size: 1rem;
   }
 
   .parkbio {
@@ -94,5 +111,9 @@ p {
 
   .om-os2 {
     padding: 5%;
+  }
+
+  .video {
+    margin-top: 35px;
   }
 }

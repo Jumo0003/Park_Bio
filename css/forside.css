@@ -19,6 +19,11 @@
   margin: 20px auto;
   position: relative;
   overflow: hidden; /* Skjuler billeder, der stikker ud */
+  background-color: #610f13; /* light background */
+  border: 2px solid #fcbc32;
+  margin: 40px auto; /* centers the box on the page */
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
 /* Hide the images by default */
@@ -118,9 +123,13 @@
   background-color: #610f13;
   box-sizing: border-box;
   width: 680px;
-  height: 500px;
+  height: 450px;
   padding: 10px;
   margin: 10px;
+  background-color: #610f13; /* light background */
+  border: 2px solid #fcbc32;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
 #movieposter {
@@ -145,21 +154,48 @@
 }
 
 #knap1 {
+  font-size: 1rem;
+  color: white;
   display: grid;
   grid-template-rows: 1fr;
   padding: 15px 25px;
   border-radius: 25px;
   transition: background-color 0.3s ease;
+  background-color: #b70100; /* light background */
+  border: 2px solid #fcbc32;
+  margin-top: 2rem;
+  margin-left: 0.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
 #knap2 {
+  font-size: 1rem;
+  color: white;
   padding: 15px 25px;
   border-radius: 25px;
   transition: background-color 0.3s ease;
+  background-color: #b70100; /* light background */
+  border: 2px solid #fcbc32;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+#knap1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #2e0001;
+}
+
+#knap2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #2e0001;
 }
 
 h2 {
   color: #f2f2f2;
+  margin-left: 4.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /*********Accordions*****/
@@ -177,11 +213,12 @@ h2 {
 }
 
 .accordion {
+  margin-top: 1rem;
   background-color: #4a0000;
   color: #fbfbfb;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 70%;
   border: none;
   text-align: center;
   outline: none;
@@ -190,6 +227,11 @@ h2 {
   background: #6b0f14; /* Park Bio vibe */
   border-radius: 6px;
   overflow: hidden;
+  background-color: #610f13; /* light background */
+  border: 2px solid #fcbc32;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  justify-self: center;
 }
 
 /* content hidden by default */
@@ -223,7 +265,7 @@ h2 {
   color: white;
   padding: 16px;
   font-size: 18px;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 }
 
