@@ -1,8 +1,15 @@
 .karousel {
   display: grid;
+  background-color: #610f13; /* light background */
+  border: 2px solid #fcbc32;
+  margin-top: 2rem;
+  margin-left: 0.3rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  width: 100%;
 }
 .film1 img {
-  border: 5px double #fcbc32;
+  border: 2px solid #fcbc32;
   width: 70%;
   height: auto;
   display: flex;
@@ -15,6 +22,7 @@
   color: white;
   font-size: 1.5rem;
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 .boks1 {
@@ -40,28 +48,32 @@
   margin-top: 1rem;
 }
 
-.info2 {
+.info3 {
   background-color: black; /* light background */
   border: 2px solid #fcbc32;
   padding: 20px; /* space inside the box */
-  max-width: 400px; /* optional: keeps it from getting too wide */
+  width: 400px; /* optional: keeps it from getting too wide */
   margin: 40px auto; /* centers the box on the page */
   margin-top: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
-.info2 h3 {
+.info3 h3 {
   color: #c00a08;
   font-size: smaller;
   font-weight: 100;
 }
 
-.info2 p {
+.info3 p {
   color: white;
   font-weight: 100;
   font-size: 12px;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.video {
+  justify-self: center;
 }
 
 /******karousel*******/
@@ -197,18 +209,36 @@
   main {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 kolonner: 50/50 */
-    gap: 15rem; /* afstand mellem billede og boks */
+    gap: 2rem; /* afstand mellem billede og boks */
     max-width: 1000px;
     margin: auto;
+    justify-content: center;
   }
 
   .film1 img {
+    grid-template-columns: 1fr;
     width: 100%;
     height: auto;
-    display: block;
+    display: grid;
     margin-top: 2rem;
-    margin-left: 2rem;
-    grid-template-rows: 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+
+  .boks2 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .video {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .star-rating {
+    grid-template-columns: 2fr;
+    margin-top: 1px;
   }
 
   .boks1 {
@@ -218,14 +248,8 @@
     justify-self: center;
   }
 
-  .star-rating {
-    grid-column: 2;
-    margin-top: 1rem;
-    justify-self: center; /* eller center, hvis du vil have dem centreret */
-    grid-template-rows: 1fr;
-  }
-
-  .boks2 {
-    width: 100%;
+  .info3 {
+    justify-content: center;
+    width: 500px;
   }
 }

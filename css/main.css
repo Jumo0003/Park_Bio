@@ -126,36 +126,56 @@ body {
 .footer {
   background-color: #610f13;
   border-top: #fcbc32 solid 2px;
-  padding: 1rem;
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 2rem;
-  font-family: sans-serif;
-  font-size: 17px;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
 }
 
-.footer p {
-  margin: 0;
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-info {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
   color: white;
+}
+
+.contact-item svg {
+  fill: #fcbc32;
 }
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
 }
 
-.social-links a img {
+.social-links img {
   width: 24px;
-  height: 24px;
-  filter: invert(100%); /* makes icons white */
-  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: invert(82%) sepia(70%) saturate(2000%) hue-rotate(350deg) brightness(100%) contrast(95%);
+  /* Dette gør ikonerne gule */
+  transition: transform 0.2s ease;
 }
 
-.social-links a:hover img {
+.social-links img:hover {
   transform: scale(1.2);
-  filter: invert(67%) sepia(75%) saturate(500%) hue-rotate(200deg);
 }
 
 /********menu***********/
